@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+._*
+
+# editors
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
+
+# logs en tijdelijke bestanden
+*.log
+node_modules/
