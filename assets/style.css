@@ -477,3 +477,26 @@ button{ font:inherit; color:inherit; }
 .voetknop{ background:none; border:0; padding:0; font:inherit; color:inherit; cursor:pointer;
   text-decoration:none; opacity:.86; }
 .voetknop:hover{ opacity:1; border-bottom:1px solid currentColor; }
+
+/* ==========================================================================
+   Rasters: haarlijnen komen van de kaarten zelf, niet van de achtergrond.
+   Zo licht een lege cel of een halve laatste rij niet grijs op, en past het
+   raster zich aan het aantal kaarten aan.
+   ========================================================================== */
+.legenda, .rooster, .pakketten, .taal, .bloglijst{ background:transparent; border:0; }
+.legenda > *, .rooster > *, .pakketten > *, .taal > *, .bloglijst > *{
+  box-shadow:0 0 0 1px var(--lijn-sterk);
+}
+.legenda{ grid-template-columns:repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+
+/* Liever stapelen dan een halve rij met een lege cel */
+@media (max-width:1079px){ .pakketten--3{ grid-template-columns:1fr; } }
+@media (max-width:979px){ .rooster--3{ grid-template-columns:1fr; } }
+
+/* Blog: alleen horizontale scheidingen. Een oneven aantal berichten laat dan
+   nooit een omkaderde lege cel achter. */
+.bloglijst{ gap:0 clamp(1.8rem,3.5vw,3.4rem); border-top:1px solid var(--lijn-sterk); border-bottom:0; }
+.bloglijst > *{ box-shadow:none; border-bottom:1px solid var(--lijn-sterk); }
+.blogkaart{ padding:1.6rem 0 1.8rem; background:transparent; }
+.blogkaart:hover{ background:transparent; }
+.blogkaart:hover h2{ color:var(--dak); }
