@@ -507,3 +507,7 @@ button{ font:inherit; color:inherit; }
   .bloglijst > *:last-child:nth-child(odd){ grid-column:1 / -1; }
   .bloglijst > *:last-child:nth-child(odd) > *{ max-width:46rem; }
 }
+
+/* Onder de menu-omslag altijd één kolom: drie kaarten in twee kolommen
+   laat anders een halve rij over. */
+@media (max-width:899px){ .legenda{ grid-template-columns:1fr; } }
