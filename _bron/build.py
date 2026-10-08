@@ -846,7 +846,7 @@ def voet_html():
             f'<p class="tk" style="margin-top:1.4rem">Juridisch</p>{j}</nav></div>'
             f'<div class="schaal" style="margin-top:2.4rem" aria-hidden="true">{schaal}</div>'
             f'<div class="voet__onder tk"><span>&#169; Vooruit.biz &#183; Knapheideweg 55 &#183; 6562 DR Groesbeek</span>'
-            f'<span>Opgericht in 2013</span></div></div></footer>')
+            f'<span>Opgericht in 2013 &#183; Website door <a href="https://maxxmarketing.eu" target="_blank" rel="noopener">maxxmarketing.eu</a></span></div></div></footer>')
 
 COOKIEBALK = ('<aside class="cookiebalk" data-cookiebalk hidden aria-label="Cookiemelding">'
   '<div class="omhulsel cookiebalk__in">'
